@@ -4,29 +4,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Rudelsingen mit den Holtener Nachtwächtern</title>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #faf7f0;
-  color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
+  background: #091c29;
+  color: #dfcb30;
+  font-family: Arial, sans-serif;
 }
 
 main {
   position: relative;
-  max-width: 650px;
-  margin: 25px auto;
-  padding: 25px;
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 3px 15px #0001;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  min-height: 100vh;
   overflow: hidden;
+  background: #091c29;
 }
 
-/* Nachtwächter als Wasserzeichen */
+/* Nachtwächter im Hintergrund */
 main::before {
   content: "";
   position: absolute;
@@ -34,9 +38,10 @@ main::before {
   background-image: url("nachtwaechter-logo.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 85% auto;
-  opacity: 0.50;
+  background-size: 95% auto;
+  opacity: 0.35;
   pointer-events: none;
+  z-index: 0;
 }
 
 main > * {
@@ -44,76 +49,79 @@ main > * {
   z-index: 1;
 }
 
-h1, .intro {
+/* Überschriften */
+h1 {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(48px, 11vw, 78px);
+  font-weight: normal;
   text-align: center;
+  margin: 0;
+  color: #dfcb30;
 }
 
-h1 {
-  color: #8b1e2d;
-  font-size: 27px;
+.untertitel {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(25px, 6vw, 42px);
+  text-align: center;
+  margin: 0 0 20px;
 }
 
 .datum {
   text-align: center;
+  font-size: 21px;
   font-weight: bold;
-  font-size: 20px;
-}
-
-h2 {
-  color: #8b1e2d;
-  margin-top: 35px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #dfcb30;
-}
-
-.intro {
   margin-bottom: 35px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-}
-
-li a {
-  display: block;
-  background: rgba(250,247,240,0.88);
-  padding: 15px;
-  border-radius: 10px;
-  color: #333;
-  text-decoration: none;
-  font-size: 17px;
-  box-shadow: 0 1px 4px #0001;
-}
-
-li a:hover {
-  background: #f3e7c4;
-  color: #8b1e2d;
 }
 
 .programm {
   text-align: center;
-  padding: 18px 10px;
-  background: rgba(223,203,48,0.15);
-  border-radius: 12px;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .programm h2 {
-  margin: 0;
-  border: none;
+  font-size: clamp(23px, 5vw, 34px);
+  margin-bottom: 5px;
+}
+
+.programm p {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+/* Liedliste */
+ul {
+  list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 9px 0;
+}
+
+li a {
+  display: block;
+  padding: 13px 15px;
+  border: 1px solid #dfcb30;
+  border-radius: 12px;
+  background: rgba(9, 28, 41, 0.45);
+  color: #dfcb30;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+li a:hover,
+li a:focus {
+  background: rgba(223, 203, 48, 0.18);
 }
 
 .hinweis {
   text-align: center;
-  font-size: 14px;
-  color: #666;
   margin-top: 35px;
+  font-size: 13px;
+  color: #dfcb30;
 }
 </style>
 </head>
@@ -121,28 +129,29 @@ li a:hover {
 <body>
 <main>
 
-<h1>🏮 Rudelsingen mit den Holtener Nachtwächtern</h1>
-<p class="datum">Samstag, 19. Dezember 2026</p>
-<p class="intro">🎶 Gemeinsam Adventslieder singen 🎶</p>
+<h1>Rudelsingen</h1>
 
-<h2>🎄 Zum Einstimmen</h2>
+<p class="untertitel">
+mit den Holtener Nachtwächtern
+</p>
+
+<p class="datum">
+Samstag, 19. Dezember 2026
+</p>
+
+<div class="programm">
+  <h2>Programm der Holtener Nachtwächter</h2>
+  <p>Mit dem Oberbürgermeister</p>
+</div>
+
 <ul>
 <li><a href="es-ist-fuer-uns-eine-zeit-angekommen.pdf" target="_blank">Es ist für uns eine Zeit angekommen</a></li>
 <li><a href="suesser-die-glocken-nie-klingen.pdf" target="_blank">Süßer die Glocken nie klingen</a></li>
 <li><a href="drueben-in-holten.pdf" target="_blank">Drüben in Holten</a></li>
-</ul>
-
-<div class="programm">
-<h2>🏮 Programm der Holtener Nachtwächter</h2>
-<p>Mit dem Oberbürgermeister</p>
-</div>
-
-<h2>🎶 Gemeinsames Rudelsingen</h2>
-<ul>
 <li><a href="wir-sagen-euch-an-den-lieben-advent.pdf" target="_blank">Wir sagen euch an den lieben Advent</a></li>
 <li><a href="kling-gloeckchen-klingelingeling.pdf" target="_blank">Kling, Glöckchen, klingelingeling</a></li>
 <li><a href="leise-rieselt-der-schnee.pdf" target="_blank">Leise rieselt der Schnee</a></li>
-<li><a href="engel_auf_den_feldern_NEU.pdf" target="_blank">Engel auf den Feldern singen</a></li>
+<li><a href="Engel_auf_den_Feldern_NEU.pdf" target="_blank">Engel auf den Feldern singen</a></li>
 <li><a href="es-kommt-ein-schiff-geladen.pdf" target="_blank">Es kommt ein Schiff geladen</a></li>
 <li><a href="alle-jahre-wieder.pdf" target="_blank">Alle Jahre wieder</a></li>
 <li><a href="stern-ueber-bethlehem.pdf" target="_blank">Stern über Bethlehem</a></li>
@@ -155,7 +164,9 @@ li a:hover {
 <li><a href="stille-nacht-heilige-nacht.pdf" target="_blank">Stille Nacht, heilige Nacht</a></li>
 </ul>
 
-<p class="hinweis">Änderungen im Programm vorbehalten.</p>
+<p class="hinweis">
+Änderungen im Programm vorbehalten.
+</p>
 
 </main>
 </body>
